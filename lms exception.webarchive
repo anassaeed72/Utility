@@ -1,0 +1,271 @@
+bplist00Ñ_WebMainResourceÕ	
+_WebResourceFrameName^WebResourceURL_WebResourceData_WebResourceMIMEType_WebResourceTextEncodingNameP_%https://lms.lums.edu.pk/portal/xloginOKÿ<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><style type="text/css"></style></head><body>
+<div class="portletBody">
+<h3>Error</h3>
+<p>An unexpected error has occurred.<br><br></p>
+<h4>Send a bug report</h4>
+<p>To send a bug report, describe what you were doing when the problem occurred, in the space below, and press the submit button.</p>
+<form action="https://lms.lums.edu.pk/portal/error-report" method="POST">
+<input type="hidden" name="problem" value="
+org.sakaiproject.portal.api.PortalHandlerException: pk.edu.lums.util.ZambeelIntegrationException: java.sql.SQLException: statement handle not executed
+    at org.sakaiproject.portal.charon.handlers.XLoginHandler.doPost(XLoginHandler.java:48)
+caused by: pk.edu.lums.util.ZambeelIntegrationException: java.sql.SQLException: statement handle not executed
+    at pk.edu.lums.sakaiproject.integration.cm.impl.CourseManagementZambeelImpl.findSectionRoles(CourseManagementZambeelImpl.java:262)
+caused by: java.sql.SQLException: statement handle not executed
+    at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+    at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:146)
+    at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:208)
+    at oracle.jdbc.driver.T4CPreparedStatement.doDescribe(T4CPreparedStatement.java:736)
+    at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3308)
+    at oracle.jdbc.driver.OracleResultSetImpl.findColumn(OracleResultSetImpl.java:1926)
+    at oracle.jdbc.driver.OracleResultSet.getString(OracleResultSet.java:1515)
+    at org.apache.commons.dbcp.DelegatingResultSet.getString(DelegatingResultSet.java:225)
+    at pk.edu.lums.dao.peopleSoft.daos.EnrollDao.getEnrollmentFromResultSet(EnrollDao.java:401)
+    at pk.edu.lums.dao.peopleSoft.daos.EnrollDao.getEnrollments(EnrollDao.java:344)
+    at pk.edu.lums.sakaiproject.integration.cm.impl.CourseManagementZambeelImpl.findSectionRoles(CourseManagementZambeelImpl.java:262)
+    at org.sakaiproject.coursemanagement.impl.CourseManagementServiceFederatedImpl.findSectionRoles(CourseManagementServiceFederatedImpl.java:731)
+    at sun.reflect.GeneratedMethodAccessor1163.invoke(null:-1)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:585)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:296)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:177)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:144)
+    at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:107)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:166)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+    at $Proxy2.findSectionRoles(null:-1)
+    at org.sakaiproject.coursemanagement.impl.provider.SectionRoleResolver.getGroupRoles(SectionRoleResolver.java:104)
+    at org.sakaiproject.coursemanagement.impl.provider.CourseManagementGroupProvider.getGroupRolesForUser(CourseManagementGroupProvider.java:125)
+    at sun.reflect.GeneratedMethodAccessor522.invoke(null:-1)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:585)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:296)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:177)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:144)
+    at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:107)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:166)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+    at $Proxy3.getGroupRolesForUser(null:-1)
+    at sun.reflect.GeneratedMethodAccessor522.invoke(null:-1)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:585)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:296)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:198)
+    at $Proxy3.getGroupRolesForUser(null:-1)
+    at org.sakaiproject.authz.impl.BaseAuthzGroupService.refreshUser(BaseAuthzGroupService.java:912)
+    at org.sakaiproject.event.impl.UsageSessionServiceAdaptor.login(UsageSessionServiceAdaptor.java:464)
+    at org.sakaiproject.event.cover.UsageSessionService.login(UsageSessionService.java:166)
+    at org.sakaiproject.login.tool.LoginTool.doPost(LoginTool.java:378)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+    at org.sakaiproject.util.RequestFilter.doFilter(RequestFilter.java:555)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+    at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691)
+    at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+    at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:364)
+    at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:301)
+    at org.sakaiproject.tool.impl.ActiveToolComponent$MyActiveTool.help(ActiveToolComponent.java:529)
+    at org.sakaiproject.portal.charon.SkinnableCharonPortal.doLogin(SkinnableCharonPortal.java:981)
+    at org.sakaiproject.portal.charon.handlers.XLoginHandler.doGet(XLoginHandler.java:59)
+    at org.sakaiproject.portal.charon.handlers.XLoginHandler.doPost(XLoginHandler.java:48)
+    at org.sakaiproject.portal.charon.SkinnableCharonPortal.doPost(SkinnableCharonPortal.java:1186)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+    at org.sakaiproject.util.RequestFilter.doFilter(RequestFilter.java:592)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:210)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:174)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+    at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:542)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:151)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:870)
+    at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+    at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+    at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+    at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:685)
+    at java.lang.Thread.run(Thread.java:595)
+
+">
+<input type="hidden" name="problemRequest" value="
+Request:
+:    AuthType:null
+:    CharEncoding:UTF-8
+:    ContentLength:48
+:    ContentType:application/x-www-form-urlencoded
+:    ContextPath:/portal
+:    LocalAddress:10.99.0.188
+:    LocalName:lms1.lums.edu.pk
+:    LocalPort:443
+:    Method:POST
+:    PathInfo:/xlogin
+:    Protocol:HTTP/1.1
+:    QueryString:null
+:    RemoteAddress:169.145.90.90
+:    RemoteHost:169.145.90.90
+:    RemotePort:16980
+:    Requested URL:https://lms.lums.edu.pk/portal/xlogin
+:    Scheme:https
+:    ServerName:lms.lums.edu.pk
+:    Headers:
+:        Header:host:lms.lums.edu.pk
+:        Header:content-type:application/x-www-form-urlencoded
+:        Header:origin:https://lms.lums.edu.pk
+:        Header:cookie:---censored---
+:        Header:content-length:48
+:        Header:connection:keep-alive
+:        Header:accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+:        Header:user-agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9
+:        Header:referer:https://lms.lums.edu.pk/portal
+:        Header:accept-language:en-us
+:        Header:accept-encoding:gzip, deflate
+:    Parameters:
+:        Parameter:submit:0:Login
+:        Parameter:pw:0:----censored----
+:        Parameter:eid:0:----censored----
+:    Attributes:
+:        Attribute:sakai.session:org.sakaiproject.tool.impl.SessionComponent$MySession@36f028a8
+:        Attribute:javax.servlet.request.key_size:128
+:        Attribute:javax.servlet.request.cipher_suite:SSL_RSA_WITH_RC4_128_MD5
+:        Attribute:sakai.character.encoding.done:sakai.character.encoding.done
+:        Attribute:sakai.filtered:sakai.filtered
+:        Attribute:javax.servlet.request.ssl_session:560d5caa273142462c96091e84f955c8d3453677aae2d4bd8ed962d5e4f4bd26
+Session:
+:    Created:1443718268768
+:    LastAccess:1443718397391
+:    MaxInactive:3600
+:    Attributes:
+:        Attribute:portalskin:defaultskin
+
+">
+<input type="hidden" name="problemPlacement" value="
+Tool Placement:
+No Placement
+
+">
+<input type="hidden" name="problemdigest" value="DE6F79AB21F33BCC560F2B62B67FFCA253BFCFD6">
+<input type="hidden" name="session" value="103b167c-bcf1-4bc1-9695-c146d8e982a9">
+<input type="hidden" name="user" value="bc0c5420-2b45-484c-be29-75f900c8f179">
+<input type="hidden" name="time" value="Oct 1, 2015 21:53:17">
+<table class="itemSummary" cellspacing="5" cellpadding="5">
+<tbody>
+<tr>
+<td><textarea rows="10" cols="60" name="comment"></textarea></td>
+</tr>
+</tbody>
+</table>
+<div class="act">
+<input type="submit" value="Submit Report">
+</div>
+</form><br>
+<h4>Recovery</h4>
+<p>To recover from this error without sending in a bug report, please do the following:
+</p><ul><li>Press the Logout button above to logout.</li>
+<li>Close your browser to assure a clean start.</li>
+<li>Re-open your browser and start again.</li></ul><br><br><p></p>
+<h4>Technical Details</h4>
+<p>This information will automatically be included in your bug report.</p>
+<p></p><pre>org.sakaiproject.portal.api.PortalHandlerException: pk.edu.lums.util.ZambeelIntegrationException: java.sql.SQLException: statement handle not executed
+    at org.sakaiproject.portal.charon.handlers.XLoginHandler.doPost(XLoginHandler.java:48)
+caused by: pk.edu.lums.util.ZambeelIntegrationException: java.sql.SQLException: statement handle not executed
+    at pk.edu.lums.sakaiproject.integration.cm.impl.CourseManagementZambeelImpl.findSectionRoles(CourseManagementZambeelImpl.java:262)
+caused by: java.sql.SQLException: statement handle not executed
+    at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+    at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:146)
+    at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:208)
+    at oracle.jdbc.driver.T4CPreparedStatement.doDescribe(T4CPreparedStatement.java:736)
+    at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3308)
+    at oracle.jdbc.driver.OracleResultSetImpl.findColumn(OracleResultSetImpl.java:1926)
+    at oracle.jdbc.driver.OracleResultSet.getString(OracleResultSet.java:1515)
+    at org.apache.commons.dbcp.DelegatingResultSet.getString(DelegatingResultSet.java:225)
+    at pk.edu.lums.dao.peopleSoft.daos.EnrollDao.getEnrollmentFromResultSet(EnrollDao.java:401)
+    at pk.edu.lums.dao.peopleSoft.daos.EnrollDao.getEnrollments(EnrollDao.java:344)
+    at pk.edu.lums.sakaiproject.integration.cm.impl.CourseManagementZambeelImpl.findSectionRoles(CourseManagementZambeelImpl.java:262)
+    at org.sakaiproject.coursemanagement.impl.CourseManagementServiceFederatedImpl.findSectionRoles(CourseManagementServiceFederatedImpl.java:731)
+    at sun.reflect.GeneratedMethodAccessor1163.invoke(null:-1)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:585)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:296)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:177)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:144)
+    at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:107)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:166)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+    at $Proxy2.findSectionRoles(null:-1)
+    at org.sakaiproject.coursemanagement.impl.provider.SectionRoleResolver.getGroupRoles(SectionRoleResolver.java:104)
+    at org.sakaiproject.coursemanagement.impl.provider.CourseManagementGroupProvider.getGroupRolesForUser(CourseManagementGroupProvider.java:125)
+    at sun.reflect.GeneratedMethodAccessor522.invoke(null:-1)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:585)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:296)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:177)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:144)
+    at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:107)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:166)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+    at $Proxy3.getGroupRolesForUser(null:-1)
+    at sun.reflect.GeneratedMethodAccessor522.invoke(null:-1)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:585)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:296)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:198)
+    at $Proxy3.getGroupRolesForUser(null:-1)
+    at org.sakaiproject.authz.impl.BaseAuthzGroupService.refreshUser(BaseAuthzGroupService.java:912)
+    at org.sakaiproject.event.impl.UsageSessionServiceAdaptor.login(UsageSessionServiceAdaptor.java:464)
+    at org.sakaiproject.event.cover.UsageSessionService.login(UsageSessionService.java:166)
+    at org.sakaiproject.login.tool.LoginTool.doPost(LoginTool.java:378)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+    at org.sakaiproject.util.RequestFilter.doFilter(RequestFilter.java:555)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+    at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691)
+    at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+    at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:364)
+    at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:301)
+    at org.sakaiproject.tool.impl.ActiveToolComponent$MyActiveTool.help(ActiveToolComponent.java:529)
+    at org.sakaiproject.portal.charon.SkinnableCharonPortal.doLogin(SkinnableCharonPortal.java:981)
+    at org.sakaiproject.portal.charon.handlers.XLoginHandler.doGet(XLoginHandler.java:59)
+    at org.sakaiproject.portal.charon.handlers.XLoginHandler.doPost(XLoginHandler.java:48)
+    at org.sakaiproject.portal.charon.SkinnableCharonPortal.doPost(SkinnableCharonPortal.java:1186)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:710)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+    at org.sakaiproject.util.RequestFilter.doFilter(RequestFilter.java:592)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:210)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:174)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+    at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:542)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:151)
+    at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:870)
+    at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+    at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+    at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+    at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:685)
+    at java.lang.Thread.run(Thread.java:595)
+
+
+user: bc0c5420-2b45-484c-be29-75f900c8f179
+
+usage-session: 103b167c-bcf1-4bc1-9695-c146d8e982a9
+
+time: Oct 1, 2015 21:53:17
+
+</pre><p></p>
+
+
+</div></body></html>Ytext/htmlUUTF-8    ( ? N ` v ” • ½LÀLÊ                           LÐ
